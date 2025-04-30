@@ -6,7 +6,7 @@
  * @returns The sum of the two numbers if add is true and false otherwise.
  */
 function sumValues(num1, num2, add) {
-    if (add) {
+    if (add && !Number.isNaN(num1) && !Number.isNaN(num2)) {
         let result = 0;
 
         result = num1 + num2;
@@ -14,7 +14,7 @@ function sumValues(num1, num2, add) {
         return result;
     }
     else {
-        return !add;
+        return add;
     }
 }
 // this is a test to see what happens
@@ -32,7 +32,7 @@ function discountPrices(prices, discount) {
         return false;
     }
     for(let i = 0; i < length; i++) {
-        discountedPrice += prices[i] * (1 - discount);
+        discountedPrice = prices[i] * (1 - discount);
         discounted.push(discountedPrice);
     }
 
