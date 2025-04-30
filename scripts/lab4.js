@@ -14,7 +14,7 @@ function sumValues(num1, num2, add) {
         return result;
     }
     else {
-        return add;
+        return false;
     }
 }
 // this is a test to see what happens
@@ -28,7 +28,7 @@ function discountPrices(prices, discount) {
     const discounted = [];
     const length = prices.length;
     let discountedPrice = 0;
-    if(!prices || Number.isNaN(prices[0])){
+    if(prices==[] || Number.isNaN(prices[0]) || Number.isNaN(discount)){
         return false;
     }
     for(let i = 0; i < length; i++) {
