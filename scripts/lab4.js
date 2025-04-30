@@ -17,7 +17,7 @@ function sumValues(num1, num2, add) {
         return !add;
     }
 }
-
+// this is a test to see what happens
 /**
  * 
  * @param {*} prices, an array of the original price.
